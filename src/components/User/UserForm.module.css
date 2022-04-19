@@ -1,0 +1,37 @@
+.user-form {
+  margin: 2rem auto;
+  padding: 1rem;
+  width: 90%;
+  /* max-width: 80rem; */
+}
+
+.user-form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.user-form input {
+  display: block;
+  width: 100%;
+  border: 1px solid white;
+  font: inherit;
+  line-height: 1.5rem;
+  padding: 0 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.user-form input:focus {
+  outline: none;
+  background: #d0e8fa;
+  border-color: #008b89;
+}
+
+.user-form.invalid input {
+  border-color: red;
+  background: #ffd7d7;
+}
+
+.user-form.invalid label {
+  color: red;
+}

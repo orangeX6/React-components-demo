@@ -1,0 +1,10 @@
+.li {
+  width: 100%;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0.5rem 0;
+  padding: 0.3rem;
+  color: dimgray;
+  background-color: rgb(255, 255, 255, 0.5);
+  border: 1px solid white;
+}

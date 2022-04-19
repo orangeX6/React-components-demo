@@ -1,0 +1,9 @@
+#form,
+#list {
+  width: 90%;
+  margin: auto;
+  margin-top: 3rem;
+  background-color: rgba(255, 221, 0, 0.6);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
