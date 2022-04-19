@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import styles from "./UserForm.module.css";
-import Card from "../UI/Card/Card";
-import Modal from "../UI/Modal/Modal";
-import Button from "../UI/Button/Button";
+import styles from './UserForm.module.css';
+import Card from '../UI/Card/Card';
+import Modal from '../UI/Modal/Modal';
+import Button from '../UI/Button/Button';
 
 const UserForm = (props) => {
-  const [user, setUser] = useState("");
-  const [age, setAge] = useState("");
+  const [user, setUser] = useState('');
+  const [age, setAge] = useState('');
   const [error, setError] = useState();
 
   const usernameTextChange = (e) => {
@@ -21,16 +21,16 @@ const UserForm = (props) => {
   const formSubmitHandler = (e) => {
     e.preventDefault();
 
-    if (user.trim().length === 0 || age === "")
+    if (user.trim().length === 0 || age === '')
       return setError({
-        title: "Invalid Input",
-        message: "Please enter valid name and age (Non-Empty Values)",
+        title: 'Invalid Input',
+        message: 'Please enter valid name and age (Non-Empty Values)',
       });
 
     if (age < 0)
       return setError({
-        title: "Invalid Input",
-        message: "Please enter valid name and age (> 0)",
+        title: 'Invalid Input',
+        message: 'Please enter valid name and age (> 0)',
       });
 
     const userDetails = {
@@ -39,14 +39,14 @@ const UserForm = (props) => {
     };
 
     props.onAddUser(userDetails);
-    setUser("");
-    setAge("");
+    setUser('');
+    setAge('');
   };
 
   const errorHandler = () => setError(null);
 
   return (
-    <div>
+    <>
       {error && (
         <Modal
           title={error.title}
@@ -54,7 +54,7 @@ const UserForm = (props) => {
           onConfirm={errorHandler}
         ></Modal>
       )}
-      <Card className={styles["user-form"]}>
+      <Card className={styles['user-form']}>
         <form onSubmit={formSubmitHandler}>
           {/* <div className={styles["user-form"]}> */}
           <label htmlFor="username">Username</label>
@@ -76,7 +76,7 @@ const UserForm = (props) => {
           <Button type="submit">Add User</Button>
         </form>
       </Card>
-    </div>
+    </>
   );
 };
 

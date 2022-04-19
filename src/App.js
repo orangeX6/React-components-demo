@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import UserList from "./components/User/UserList";
-import UserForm from "./components/User/UserForm";
+import UserList from './components/User/UserList';
+import UserForm from './components/User/UserForm';
 
 function App() {
   const [usersList, setUsersList] = useState([]);
@@ -14,10 +14,10 @@ function App() {
   };
 
   return (
-    <div>
+    <>
       <UserForm onAddUser={addNewUser} />
       <UserList users={usersList} />
-    </div>
+    </>
   );
 }
 

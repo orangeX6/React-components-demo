@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import Card from "../Card/Card";
-import Button from "../Button/Button";
-import styles from "./Modal.module.css";
+import Card from '../Card/Card';
+import Button from '../Button/Button';
+import styles from './Modal.module.css';
 
 const Modal = (props) => {
   return (
-    <div>
+    <>
       <div className={styles.backdrop} onClick={props.onConfirm}></div>
       <Card className={styles.modal}>
         <header className={styles.header}>
@@ -19,7 +19,7 @@ const Modal = (props) => {
           <Button onClick={props.onConfirm}>Okay</Button>
         </footer>
       </Card>
-    </div>
+    </>
   );
 };
 

@@ -1,0 +1,21 @@
+workarounds around using jsx. 
+if we want to render multiple components we usually wrap them in a <div>. This will create unnecessary divs rendered in the final output. So we can use - 
+
+1.
+Arrays -
+return (
+    [
+        <Form />,
+        <Button/>
+    ]
+)
+
+
+2. Wrapper component 
+const Wrapper = props => {
+    return props.children;
+}
+export default Wrapper;
+
+3. React Fragment
+<></> or <React.Fragment></React.Fragment>
